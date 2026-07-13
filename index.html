@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Travel</title>
+    <style>
+        /* --- BASIC RESET --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav li {
+            /* This makes the list items sit side-by-side without flexbox */
+            display: inline-block; 
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #18bc9c;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* --- MAIN CONTENT CONTAINER --- */
+        .container {
+            width: 80%;
+            /* This centers the container on the page */
+            margin: 0 auto; 
+            padding: 40px 0;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            border-bottom: 4px solid #18bc9c;
+            margin-bottom: 40px;
+        }
+
+        .hero h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #18bc9c;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #128f76;
+        }
+
+        /* --- DESTINATIONS GALLERY (CARDS) --- */
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .gallery {
+            text-align: center;
+        }
+
+        .card {
+            /* The magic trick for side-by-side columns without flexbox */
+            display: inline-block;
+            width: 30%;
+            margin: 1%;
+            background-color: white;
+            border-radius: 8px;
+            /* Prevents weird alignment issues with inline-block */
+            vertical-align: top; 
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .card img {
+            width: 100%;
+            /* Removes the tiny space at the bottom of images */
+            display: block; 
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: #18bc9c;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>WANDERLUST</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <section class="hero">
+            <h2>Explore The World With Us</h2>
+            <p>Discover breathtaking landscapes, vibrant cultures, and unforgettable adventures. Your journey starts right here.</p>
+            <a href="#" class="btn">Start Planning</a>
+            <br>
+            <!-- Using Placehold.co for reliable dummy images -->
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautiful landscape">
+        </section>
+
+        <h2 class="section-title">Popular Destinations</h2>
+        
+        <section class="gallery">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Paris">
+                <div class="card-content">
+                    <h3>Paris, France</h3>
+                    <p>Experience the city of lights, incredible food, and rich history.</p>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="London">
+                <div class="card-content">
+                    <h3>London, UK</h3>
+                    <p>Wander through historic streets and visit iconic landmarks.</p>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tokyo">
+                <div class="card-content">
+                    <h3>Tokyo, Japan</h3>
+                    <p>A perfect blend of ultra-modern cityscapes and ancient traditions.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Wanderlust Travel. Built by an aspiring web developer!</p>
+    </footer>
+
+</body>
+</html>
